@@ -10,6 +10,7 @@ export const defaultTheme = {
         "gray-100" : "#FAFAFA",
 
         "white" : "#FFFFFF",
+        "white-100": "#f2f2f2"
         
     },
 
