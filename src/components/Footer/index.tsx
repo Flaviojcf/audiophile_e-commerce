@@ -1,6 +1,6 @@
 import { CopyrightText, FooterContainer, FooterContainerHeader, Rectangle, SocialsContainer } from "./styles";
 
-import audioPhileImg from '../../../public/assets/audiophile.svg'
+import audioPhileImg from '../../assets/audiophile.svg'
 import { FacebookLogo, InstagramLogo, TwitterLogo } from "phosphor-react";
 
 export function Footer () {
