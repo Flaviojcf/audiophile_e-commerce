@@ -39,12 +39,12 @@ export function Footer () {
             <SocialsContainer>
                 <li>
                     <a href="#">
-                        <FacebookLogo size={24} />
+                        <FacebookLogo size={24} weight='fill' />
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <TwitterLogo size={24} />
+                        <TwitterLogo size={24} weight='fill' />
                     </a>
                 </li>
                 <li>
