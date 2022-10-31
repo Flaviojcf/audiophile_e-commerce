@@ -25,6 +25,10 @@ export const GlobalStyle = createGlobalStyle`
         cursor: pointer;
     }
 
+    ul {
+        list-style: none;
+    }
+
     h1 {
         font: 700 3.5rem;
         line-height: 58px;
