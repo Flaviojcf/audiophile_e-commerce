@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 
 export const Container = styled.header`
   display: flex;
@@ -32,19 +33,8 @@ export const ContainerImage = styled.div`
   align-items: center;
   gap: 2.625rem;
 
-  & > img:first-child {
-    display: none;
-    cursor: pointer;
-  }
-
   & > img:last-child {
     cursor: pointer;
-  }
-
-  & > img:first-child {
-    @media screen and (max-width: 1024px) {
-      display: flex;
-    }
   }
 
   @media screen and (max-width: 375px) {
@@ -53,22 +43,25 @@ export const ContainerImage = styled.div`
 `;
 
 export const ContainerLink = styled.div`
-  display: flex;
-  gap: 2.125rem;
+  > ul {
+    display: flex;
+    gap: 2.125rem;
+    list-style: none;
 
-  > a {
-    cursor: pointer;
+    > li > a {
+      cursor: pointer;
 
-    font-weight: 700;
-    font-size: 0.8125rem;
-    line-height: 25px;
-    letter-spacing: 2px;
+      font-weight: 700;
+      font-size: 0.8125rem;
+      line-height: 25px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
 
-    transition: color 0.5s;
-  }
-
-  > a:hover {
-    color: ${(props) => props.theme.colors["orange-300"]};
+      transition: color 0.5s;
+      &:hover {
+        color: ${(props) => props.theme.colors["orange-300"]};
+      }
+    }
   }
 
   @media screen and (max-width: 1024px) {
@@ -78,4 +71,62 @@ export const ContainerLink = styled.div`
 
 export const ContainerIcon = styled.div`
   cursor: pointer;
+`;
+
+// Dropdown Menu
+
+export const DropdownMenuRoot = styled(DropdownMenu.Root)`
+  display: flex;
+  border: none;
+`;
+
+export const DropdownMenuTrigger = styled(DropdownMenu.Trigger)`
+  background: black;
+  display: none;
+  border: none;
+
+  & {
+    @media screen and (max-width: 1024px) {
+      display: flex;
+    }
+  }
+`;
+
+export const DropdownMenuContent = styled(DropdownMenu.Content)`
+  > ul {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+    padding: 2rem;
+
+    border-radius: 6px;
+    margin: 1rem 0rem 0rem 2.4rem;
+
+    box-shadow: 15px 10px 22px 3px rgba(0, 0, 0, 0.58);
+    background: ${(props) => props.theme.colors["white"]};
+    color: ${(props) => props.theme.colors["black-100"]};
+
+    list-style: none;
+
+    > li > a {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.8125rem;
+      line-height: 25px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      transition: color 0.5s;
+      &:hover {
+        color: ${(props) => props.theme.colors["orange-300"]};
+      }
+    }
+  }
+
+  & {
+    @media screen and (max-width: 375px) {
+      margin: 1rem 0rem 0rem -0.85rem;
+    }
+  }
 `;

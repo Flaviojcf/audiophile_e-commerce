@@ -5,6 +5,9 @@ import {
   ContainerImage,
   ContainerLink,
   Content,
+  DropdownMenuContent,
+  DropdownMenuRoot,
+  DropdownMenuTrigger,
 } from "./styles";
 
 export function Header() {
@@ -12,14 +15,44 @@ export function Header() {
     <Container>
       <Content>
         <ContainerImage>
-          <img src="/assets/group.png" alt="" />
+          <DropdownMenuRoot>
+            <DropdownMenuTrigger>
+              <img src="/assets/Group.png" alt="" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <ul>
+                <li>
+                  <a>Home</a>
+                </li>
+                <li>
+                  <a>Headphones</a>
+                </li>
+                <li>
+                  <a>Speakers</a>
+                </li>
+                <li>
+                  <a>Earphones</a>
+                </li>
+              </ul>
+            </DropdownMenuContent>
+          </DropdownMenuRoot>
           <img src="/assets/audiophile.png" alt="Logo esrito audiophile" />
         </ContainerImage>
         <ContainerLink>
-          <a>Home</a>
-          <a>Headphones</a>
-          <a>Speakers</a>
-          <a>Earphones</a>
+          <ul>
+            <li>
+              <a>Home</a>
+            </li>
+            <li>
+              <a>Headphones</a>
+            </li>
+            <li>
+              <a>Speakers</a>
+            </li>
+            <li>
+              <a>Earphones</a>
+            </li>
+          </ul>
         </ContainerLink>
         <ContainerIcon>
           <ShoppingCart size={24} />
