@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'styled-components'
-import { Footer } from './components/Footer'
+import { ProductCategoriesNavigator } from './components/ProductCategoriesNavigator'
 import { GlobalStyle } from './styles/global'
 import { defaultTheme } from './styles/theme/default'
 
@@ -7,7 +7,7 @@ function App () {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
-      <Footer />
+      <ProductCategoriesNavigator />
     </ThemeProvider>
   )
 }
