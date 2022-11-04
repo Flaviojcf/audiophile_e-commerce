@@ -4,15 +4,27 @@ export const ProductCategoriesNavigatorContainer = styled.div`
   margin: 0 auto;
   max-width: 69.375rem;
   width: 100%;
-  margin-top: 250px; // to remove
+  margin-top: 100px; // to remove
 
   display: flex;
   align-items: center;
   gap: 1.875rem;
+
+  @media (min-width: 768px) and (max-width: 1080px) {
+    max-width: 43.0625rem;
+    gap: 0.625rem;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 20.4375rem;
+
+    flex-direction: column;
+    gap: 6rem;
+  }
 `
 
 export const ProductCategoryLink = styled.a`
-  flex: 1;
+  width: 100%;
   padding-bottom: 1.875rem;
 
   display: flex;
