@@ -1,7 +1,7 @@
-import { ThemeProvider } from "styled-components";
-import { Footer } from "./components/Footer";
-import { GlobalStyle } from "./styles/global";
-import { defaultTheme } from "./styles/theme/default";
+import { ThemeProvider } from 'styled-components'
+import { Footer } from './components/Footer'
+import { GlobalStyle } from './styles/global'
+import { defaultTheme } from './styles/theme/default'
 
 function App () {
   return (
@@ -12,4 +12,4 @@ function App () {
   )
 }
 
-export default App;
+export default App

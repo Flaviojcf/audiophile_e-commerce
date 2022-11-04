@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const FooterContainer = styled.footer`
     position: relative;
@@ -10,7 +10,7 @@ export const FooterContainer = styled.footer`
     width: 100%;
     padding: 0 10.3125rem 3rem;
 
-    background-color: ${({ theme }) => theme.colors["black-100"]};
+    background-color: ${({ theme }) => theme.colors['black-100']};
     color: ${({ theme }) => theme.colors.white};
 
     > p {
@@ -45,7 +45,7 @@ export const Rectangle = styled.div`
     height: 4px;
     width: 101px;
 
-    background-color: ${({ theme }) => theme.colors["orange-300"]};
+    background-color: ${({ theme }) => theme.colors['orange-300']};
 
     @media (max-width: 520px) {
         margin: 0 auto
@@ -82,7 +82,7 @@ export const FooterContainerHeader = styled.header`
 
             &:hover {
                 transition: color 0.2s;
-                color: ${({ theme }) => theme.colors["orange-300"]};
+                color: ${({ theme }) => theme.colors['orange-300']};
             }
         }
     }
@@ -127,7 +127,7 @@ export const SocialsContainer = styled.ul`
 
         &:hover {
             transition: color 0.2s;
-            color: ${({ theme }) => theme.colors["orange-300"]};
+            color: ${({ theme }) => theme.colors['orange-300']};
         }
     }
 
