@@ -8,9 +8,12 @@ export const defaultTheme = {
 
     'gray-200': '#F1F1F1',
     'gray-100': '#FAFAFA',
+    'gray-50': '#CFCFCF',
 
     white: '#FFFFFF',
-    'white-100': '#f2f2f2'
+    'white-100': '#f2f2f2',
+
+    red: '#CD2C2C'
 
   }
 
