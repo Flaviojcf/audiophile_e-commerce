@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 type InputProps = {
   hasError: boolean
+  isLargeSize: boolean
 }
 
 export const InputContainer = styled.div<InputProps>`
@@ -9,7 +10,7 @@ export const InputContainer = styled.div<InputProps>`
   flex-direction: column;
   gap: 0.5rem;
 
-  max-width: 19rem;
+  max-width: ${({ isLargeSize }) => isLargeSize ? '100%' : '19rem'};
 
   > div {
     display: flex;

@@ -5,11 +5,12 @@ type TextInputProps = InputHTMLAttributes<HTMLInputElement> & {
   hasError: boolean
   label: string
   placeholder: string
+  isLargeSize: boolean
 }
 
-export function TextInput ({ hasError, label, placeholder, ...rest }: TextInputProps) {
+export function TextInput ({ hasError, label, placeholder, isLargeSize, ...rest }: TextInputProps) {
   return (
-    <InputContainer hasError={hasError}>
+    <InputContainer hasError={hasError} isLargeSize={isLargeSize}>
       <div>
         <label>{label}</label>
         <span>Wrong format</span>
