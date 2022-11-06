@@ -55,7 +55,7 @@ export const InputContainer = styled.div<InputProps>`
       letter-spacing: -0.25px;
 
       &:focus {
-        border-color: ${({ theme }) => theme.colors['orange-300']};
+        border-color: ${({ theme, hasError }) => hasError ? theme.colors.red : theme.colors['orange-300']};
         opacity: 1;
       }
   }
