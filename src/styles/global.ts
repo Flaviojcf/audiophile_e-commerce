@@ -6,12 +6,12 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-     
+
     }
 
     body {
         color: ${(props) => props.theme.colors.black};
-        background: ${(props) => props.theme.colors['white-100']};
+        background: ${(props) => props.theme.colors['gray-100']};
         -webkit-font-smoothing: antialiased;
     }
 
@@ -62,6 +62,6 @@ export const GlobalStyle = createGlobalStyle`
     h6 {
         font: 700 1.125rem;
         line-height: 24px;
-        letter-spacing: 1.3px; 
+        letter-spacing: 1.3px;
     }
 `
