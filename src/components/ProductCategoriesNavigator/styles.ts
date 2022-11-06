@@ -1,10 +1,10 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const ProductCategoriesNavigatorContainer = styled.div`
   margin: 0 auto;
   max-width: 69.375rem;
   width: 100%;
-  margin-top: 100px; // to remove
 
   display: flex;
   align-items: center;
@@ -23,24 +23,19 @@ export const ProductCategoriesNavigatorContainer = styled.div`
   }
 `
 
-export const ProductCategoryLink = styled.a`
+export const ProductCategoryLink = styled(Link)`
   width: 100%;
+  height: 13.0625rem;
   padding-bottom: 1.875rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  background-color: ${({ theme }) => theme.colors['gray-100']};
+  background-color: ${({ theme }) => theme.colors['gray-200']};
   border-radius: 8px;
 
   text-decoration: none;
-
-  > img {
-    height: 180px;
-    width: 180px;
-    margin-top: -4rem;
-  }
 
   > strong {
     margin-top: 0.25rem;
@@ -65,6 +60,19 @@ export const ProductCategoryLink = styled.a`
     }
   }
 
+`
+
+export const ImageContainer = styled.div`
+  > img {
+    height: 180px;
+    width: 180px;
+    margin-top: -4rem;
+  }
+
+  .last-image {
+    height: 161px;
+    width: 178px;
+  }
 `
 
 export const GoToShop = styled.div`
