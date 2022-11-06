@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
+import styled from 'styled-components'
+import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 
 export const Container = styled.header`
   display: flex;
@@ -15,7 +15,7 @@ export const Container = styled.header`
   @media screen and (max-width: 375px) {
     padding: 2rem 1.5rem 2rem 1.5rem;
   }
-`;
+`
 
 export const Content = styled.div`
   display: flex;
@@ -26,24 +26,23 @@ export const Content = styled.div`
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   mix-blend-mode: normal;
-`;
+`
 
 export const ContainerImage = styled.div`
   display: flex;
   align-items: center;
   gap: 2.625rem;
-
-  & > img:last-child {
+  
+  & > a > img:last-child {
     cursor: pointer;
   }
 
   @media screen and (max-width: 375px) {
     gap: 4.75rem;
   }
-`;
+`
 
-export const ContainerLink = styled.div`
-  > ul {
+export const ContainerLink = styled.ul`
     display: flex;
     gap: 2.125rem;
     list-style: none;
@@ -59,26 +58,29 @@ export const ContainerLink = styled.div`
 
       transition: color 0.5s;
       &:hover {
-        color: ${(props) => props.theme.colors["orange-300"]};
+        color: ${(props) => props.theme.colors['orange-300']};
       }
     }
-  }
 
   @media screen and (max-width: 1024px) {
     display: none;
   }
-`;
+`
 
-export const ContainerIcon = styled.div`
+export const ContainerIcon = styled.button`
+  background: transparent;
+  border: none;
+  color: ${(props) => props.theme.colors.white};
+  
   cursor: pointer;
-`;
+`
 
 // Dropdown Menu
 
 export const DropdownMenuRoot = styled(DropdownMenu.Root)`
   display: flex;
   border: none;
-`;
+`
 
 export const DropdownMenuTrigger = styled(DropdownMenu.Trigger)`
   background: black;
@@ -90,7 +92,7 @@ export const DropdownMenuTrigger = styled(DropdownMenu.Trigger)`
       display: flex;
     }
   }
-`;
+`
 
 export const DropdownMenuContent = styled(DropdownMenu.Content)`
   > ul {
@@ -104,8 +106,8 @@ export const DropdownMenuContent = styled(DropdownMenu.Content)`
     margin: 1rem 0rem 0rem 2.4rem;
 
     box-shadow: 15px 10px 22px 3px rgba(0, 0, 0, 0.58);
-    background: ${(props) => props.theme.colors["white"]};
-    color: ${(props) => props.theme.colors["black-100"]};
+    background: ${(props) => props.theme.colors.white};
+    color: ${(props) => props.theme.colors['black-100']};
 
     list-style: none;
 
@@ -119,7 +121,7 @@ export const DropdownMenuContent = styled(DropdownMenu.Content)`
 
       transition: color 0.5s;
       &:hover {
-        color: ${(props) => props.theme.colors["orange-300"]};
+        color: ${(props) => props.theme.colors['orange-300']};
       }
     }
   }
@@ -129,4 +131,4 @@ export const DropdownMenuContent = styled(DropdownMenu.Content)`
       margin: 1rem 0rem 0rem -0.85rem;
     }
   }
-`;
+`

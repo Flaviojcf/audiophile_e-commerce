@@ -1,4 +1,5 @@
-import { ShoppingCart } from "phosphor-react";
+import { ShoppingCart } from 'phosphor-react'
+import { Link } from 'react-router-dom'
 import {
   Container,
   ContainerIcon,
@@ -7,10 +8,10 @@ import {
   Content,
   DropdownMenuContent,
   DropdownMenuRoot,
-  DropdownMenuTrigger,
-} from "./styles";
+  DropdownMenuTrigger
+} from './styles'
 
-export function Header() {
+export function Header () {
   return (
     <Container>
       <Content>
@@ -36,28 +37,28 @@ export function Header() {
               </ul>
             </DropdownMenuContent>
           </DropdownMenuRoot>
-          <img src="/assets/audiophile.png" alt="Logo esrito audiophile" />
+          <Link to="/">
+            <img src="/assets/audiophile.png" alt="Logo esrito audiophile" />
+          </Link>
         </ContainerImage>
         <ContainerLink>
-          <ul>
-            <li>
-              <a>Home</a>
-            </li>
-            <li>
-              <a>Headphones</a>
-            </li>
-            <li>
-              <a>Speakers</a>
-            </li>
-            <li>
-              <a>Earphones</a>
-            </li>
-          </ul>
+          <li>
+            <a>Home</a>
+          </li>
+          <li>
+            <a>Headphones</a>
+          </li>
+          <li>
+            <a>Speakers</a>
+          </li>
+          <li>
+            <a>Earphones</a>
+          </li>
         </ContainerLink>
         <ContainerIcon>
           <ShoppingCart size={24} />
         </ContainerIcon>
       </Content>
     </Container>
-  );
+  )
 }
