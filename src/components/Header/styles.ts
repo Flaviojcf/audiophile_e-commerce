@@ -32,8 +32,8 @@ export const ContainerImage = styled.div`
   display: flex;
   align-items: center;
   gap: 2.625rem;
-
-  & > img:last-child {
+  
+  & > a > img:last-child {
     cursor: pointer;
   }
 
@@ -42,8 +42,7 @@ export const ContainerImage = styled.div`
   }
 `
 
-export const ContainerLink = styled.div`
-  > ul {
+export const ContainerLink = styled.ul`
     display: flex;
     gap: 2.125rem;
     list-style: none;
@@ -62,14 +61,17 @@ export const ContainerLink = styled.div`
         color: ${(props) => props.theme.colors['orange-300']};
       }
     }
-  }
 
   @media screen and (max-width: 1024px) {
     display: none;
   }
 `
 
-export const ContainerIcon = styled.div`
+export const ContainerIcon = styled.button`
+  background: transparent;
+  border: none;
+  color: ${(props) => props.theme.colors.white};
+  
   cursor: pointer;
 `
 
