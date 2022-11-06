@@ -1,4 +1,4 @@
-import { ShoppingCart } from "phosphor-react";
+import { ShoppingCart } from 'phosphor-react'
 import {
   Container,
   ContainerIcon,
@@ -7,10 +7,10 @@ import {
   Content,
   DropdownMenuContent,
   DropdownMenuRoot,
-  DropdownMenuTrigger,
-} from "./styles";
+  DropdownMenuTrigger
+} from './styles'
 
-export function Header() {
+export function Header () {
   return (
     <Container>
       <Content>
@@ -59,5 +59,5 @@ export function Header() {
         </ContainerIcon>
       </Content>
     </Container>
-  );
+  )
 }
