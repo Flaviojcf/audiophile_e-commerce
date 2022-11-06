@@ -1,13 +1,18 @@
 import { ThemeProvider } from 'styled-components'
-import { ProductCategoriesNavigator } from './components/ProductCategoriesNavigator'
+import { BrowserRouter } from 'react-router-dom'
+
 import { GlobalStyle } from './styles/global'
 import { defaultTheme } from './styles/theme/default'
+import { Router } from './Router'
 
 function App () {
   return (
     <ThemeProvider theme={defaultTheme}>
+      <BrowserRouter>
+        <Router />
+        <GlobalStyle />
+      </BrowserRouter>
       <GlobalStyle />
-      <ProductCategoriesNavigator />
     </ThemeProvider>
   )
 }
