@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { LinkButton } from '../LinkButton'
 import { ImageContainer, ProductContainer, ProductContent } from './styles'
 
 type ProductProps = {
@@ -19,7 +19,7 @@ export function Product ({ contentPosition, description, imageUrl, name, slug }:
       <ProductContent>
         <strong>{name}</strong>
         <p>{description}</p>
-        <Link to={`/product/${slug}`}>SEE PRODUCTS</Link>
+        <LinkButton to={`/product/${slug}`} content={'SEE PRODUCT'} />
       </ProductContent>
     </ProductContainer>
   )

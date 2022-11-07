@@ -23,6 +23,8 @@ export const ProductContent = styled.div`
     letter-spacing: 1.42857px;
     text-transform: uppercase;
 
+    border-radius: 8px;
+
     color: ${({ theme }) => theme.colors.black};
   }
 
@@ -35,30 +37,6 @@ export const ProductContent = styled.div`
 
     color: ${({ theme }) => theme.colors.black};
     opacity: 0.5;
-  }
-
-  a {
-    display: inline-block;
-    margin-top: 2.5rem;
-    padding: 1rem 2rem;
-
-
-    border: none;
-
-    background-color: ${({ theme }) => theme.colors['orange-300']};
-    color: ${({ theme }) => theme.colors.white};
-
-    font-weight: 700;
-    font-size: 0.8125rem;
-    line-height: 18px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-decoration: none;
-
-    &:hover {
-      background-color: ${({ theme }) => theme.colors['orange-100']};
-      transition: background-color 0.5s;
-    }
   }
 `
 
