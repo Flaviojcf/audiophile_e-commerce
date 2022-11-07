@@ -12,9 +12,27 @@ export const ProductContainer = styled.div<ProductContainerProps>`
   align-items: center;
   gap: 7.8125rem;
 `
+type ProductContentProps = {
+  isNewProduct: boolean
+}
 
-export const ProductContent = styled.div`
+export const ProductContent = styled.div<ProductContentProps>`
+  span {
+    display: ${({ isNewProduct }) => isNewProduct ? 'block' : 'none'};
+
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 19px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+
+    color: ${({ theme }) => theme.colors['orange-300']};
+  }
+
   strong {
+    display: block;
+    margin-top: 1rem;
+
     font-style: normal;
     font-weight: 700;
     font-size: 2.5rem;
