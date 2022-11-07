@@ -3,9 +3,7 @@ import styled from 'styled-components'
 
 export const LinkButtonContainer = styled(Link)`
     display: inline-block;
-    margin-top: 2.5rem;
     padding: 1rem 2rem;
-
 
     border: none;
 
