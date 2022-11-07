@@ -19,6 +19,13 @@ export const ProductContainer = styled.div<ProductContainerProps>`
     flex-direction: column;
     gap: 3.25rem;
   }
+
+  @media (max-width: 520px) {
+    max-width: 20.4375rem;
+
+    flex-direction: column;
+    gap: 2rem;
+  }
 `
 type ProductContentProps = {
   isNewProduct: boolean
@@ -72,40 +79,72 @@ export const ProductContent = styled.div<ProductContentProps>`
       flex-direction: column;
       align-items: center;
 
-      max-width: 35.75rem;
-
       strong {
         text-align: center;
       }
 
       p {
+        max-width: 35.75rem;
         margin-bottom: 1.5rem;
+
         text-align: center;
       }
+  }
+
+  @media (max-width: 520px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    strong {
+      margin-top: 1.5rem;
+      max-width: 15rem;
+
+      font-size: 1.75rem;
+      text-align: center;
+      line-height: 38px;
     }
+
+    p {
+      max-width: 35.75rem;
+      margin: 1.5rem 0;
+
+      text-align: center;
+    }
+  }
 `
 
 export const ImageContainer = styled.div`
+  width: 100%;
+
   border-radius: 8px;
 
   background-color: ${({ theme }) => theme.colors['gray-200']};
 
   img {
+    display: block;
+
+    margin: 0 auto;
     width: 35rem;
     height: 35rem;
+
     mix-blend-mode: normal;
   }
 
   @media (max-width: 1024px) and (min-width: 520px) {
-    width: 100%;
     height: 22rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     img {
       width: 22rem;
+      height: 22rem;
+    }
+  }
+
+  @media (max-width: 520px) {
+    height: 22rem;
+
+    img {
+      width: 20.4375rem;
       height: 22rem;
     }
   }
