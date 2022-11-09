@@ -9,6 +9,12 @@ export const GlobalStyle = createGlobalStyle`
 
     }
 
+    .container {
+      max-width: 69.375rem;
+      width: 100%;
+      margin: 0 auto;
+    }
+
     body {
         color: ${(props) => props.theme.colors.black};
         background: ${(props) => props.theme.colors['gray-100']};
