@@ -118,6 +118,7 @@ export const DropdownMenuTrigger = styled(DropdownMenu.Trigger)`
 `
 
 export const DropdownMenuContent = styled(DropdownMenu.Content)`
+  z-index: 9999;
   > ul {
     display: flex;
     flex-direction: column;
