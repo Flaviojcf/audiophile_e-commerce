@@ -3,10 +3,11 @@ import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 
 export const Container = styled.header`
   display: flex;
-  padding: 2rem 10.3125rem 2.25rem 10.3125rem;
+  padding: 2rem 10.3125rem 0rem 10.3125rem;
+  
 
   color: ${(props) => props.theme.colors.white};
-  background: ${(props) => props.theme.colors.black};
+  background: ${(props) => props.theme.colors['black-200']};
 
   @media screen and (max-width: 1024px) {
     padding: 2rem 2.5rem 2rem 2.5rem;
@@ -19,12 +20,24 @@ export const Container = styled.header`
 
 export const Content = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   padding-bottom: 2.25rem;
   width: 100%;
+ 
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  @media screen and (max-width: 1440px) {
+    justify-content: space-between;
+  }
+
+  @media screen  and (min-width: 1440px) {
+    justify-content: space-between;
+  }
+
+
+
+  
   mix-blend-mode: normal;
 `
 
@@ -33,6 +46,11 @@ export const ContainerImage = styled.div`
   align-items: center;
   gap: 2.625rem;
   
+
+  @media screen and (min-width: 1440px) {
+    margin-right: 12.3125rem;
+  }
+
   & > a > img:last-child {
     cursor: pointer;
   }
@@ -43,24 +61,29 @@ export const ContainerImage = styled.div`
 `
 
 export const ContainerLink = styled.ul`
-    display: flex;
-    gap: 2.125rem;
-    list-style: none;
+  display: flex;
+  gap: 2.125rem;
+  list-style: none;
 
-    > li > a {
-      cursor: pointer;
 
-      font-weight: 700;
-      font-size: 0.8125rem;
-      line-height: 25px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+  @media screen and (min-width: 1440px) {
+    margin-right: 19.84375rem;
+  }
 
-      transition: color 0.5s;
-      &:hover {
-        color: ${(props) => props.theme.colors['orange-300']};
-      }
+  > li > a {
+    cursor: pointer;
+
+    font-weight: 700;
+    font-size: 0.8125rem;
+    line-height: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    transition: color 0.5s;
+    &:hover {
+      color: ${(props) => props.theme.colors['orange-300']};
     }
+  }
 
   @media screen and (max-width: 1024px) {
     display: none;
@@ -71,7 +94,7 @@ export const ContainerIcon = styled.button`
   background: transparent;
   border: none;
   color: ${(props) => props.theme.colors.white};
-  
+
   cursor: pointer;
 `
 
