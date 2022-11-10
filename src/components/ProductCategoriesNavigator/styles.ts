@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 export const ProductCategoriesNavigatorContainer = styled.div`
   margin: 0 auto;
+  margin-top: 12rem;
   max-width: 69.375rem;
   width: 100%;
 
