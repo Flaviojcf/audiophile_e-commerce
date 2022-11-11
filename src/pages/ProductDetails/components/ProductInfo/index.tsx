@@ -52,13 +52,14 @@ export function ProductInfo ({ product }: ProductInfoProps) {
 
         <IncludesContainer>
           <strong>IN THE BOX</strong>
-          {product?.includes?.map(includedItem => (
-            <li key={includedItem.item}>
-              <span>{includedItem.quantity}x</span>
-              <strong>{includedItem.item}</strong>
-            </li>
-          ))}
-
+          <ul>
+            {product?.includes?.map(includedItem => (
+              <li key={includedItem.item}>
+                <span>{includedItem.quantity}x</span>
+                <strong>{includedItem.item}</strong>
+              </li>
+            ))}
+          </ul>
         </IncludesContainer>
       </ProductAdditionalInfo>
     </ProductInfoContainer>

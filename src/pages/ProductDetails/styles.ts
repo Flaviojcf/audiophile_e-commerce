@@ -3,6 +3,10 @@ import styled from 'styled-components'
 export const ProductDetailsContainer = styled.main`
   margin-top: 5rem;
   margin-bottom: 10rem;
+
+  @media (max-width: 1080px) and (min-width: 768px) {
+    margin-top: 2rem;
+  }
 `
 
 export const ProductDetailsContent = styled.div`
@@ -11,6 +15,13 @@ export const ProductDetailsContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10rem;
+
+  @media (max-width: 1080px) and (min-width: 768px) {
+    margin-top: 1.5rem;
+
+    gap: 7.5rem;
+  }
+
 `
 
 export const GoBackButton = styled.button`

@@ -4,23 +4,49 @@ export const ProductInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10rem;
+
+  @media (max-width: 1080px) and (min-width: 768px) {
+    gap: 7.5rem;
+  }
 `
 
 export const ProductCard = styled.div`
   width: 100%;
+  height: 35rem;
 
   display: flex;
   align-items: center;
   gap: 7.8125rem;
+
+  position: relative;
+
+  @media (max-width: 1080px) and (min-width: 768px) {
+    gap: 4.3125rem;
+
+    height: 30rem;
+  }
 `
 
 export const ImageContainer = styled.div`
   width: 100%;
+  height: 100%;
+
+  background-color: ${({ theme }) => theme.colors['white-50']};
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   img {
     width: 35rem;
     height: 35rem;
-    margin: 0 auto;
+  }
+
+  @media (max-width: 1080px) and (min-width: 768px) {
+    img {
+      height: 13.125rem;
+      width: 13.125rem;
+    }
   }
 `
 
@@ -71,6 +97,20 @@ export const ProductCardContent = styled.div`
     line-height: 25px;
     letter-spacing: 1.28571px;
   }
+
+  @media (max-width: 1080px) and (min-width: 768px) {
+    > span {
+      font-size: 0.75rem;
+      line-height: 16px;
+      letter-spacing: 8.57143px;
+    }
+
+    > strong {
+      font-size: 1.75rem;
+      line-height: 32px;
+      letter-spacing: 1px;
+    }
+  }
 `
 
 export const ButtonsContainer = styled.div`
@@ -119,7 +159,14 @@ export const ProductAdditionalInfo = styled.div`
     color: ${({ theme }) => theme.colors.black};
 
     display: block;
+
     margin-bottom: 2rem;
+  }
+
+  @media (max-width: 1080px) and (min-width: 768px) {
+    flex-direction: column;
+
+    gap: 7.5rem;
   }
 `
 
@@ -141,35 +188,49 @@ export const FeaturesContainer = styled.div`
     }
   }
 
+  @media (max-width: 1080px) and (min-width: 768px) {
+    max-width: 100%;
+  }
 `
 
-export const IncludesContainer = styled.ul`
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+export const IncludesContainer = styled.div`
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 
-  > li {
-    > span {
-      font-size: 0.9375rem;
-      line-height: 25px;
-      font-weight: 700;
+    > li {
+      > span {
+        font-size: 0.9375rem;
+        line-height: 25px;
+        font-weight: 700;
 
-      color: ${({ theme }) => theme.colors['orange-300']};
-      opacity: 1;
-      mix-blend-mode: normal;
+        color: ${({ theme }) => theme.colors['orange-300']};
+        opacity: 1;
+        mix-blend-mode: normal;
+      }
+
+      > strong {
+        margin-left: 1.5rem;
+
+        font-weight: 500;
+        font-size: 0.9375rem;
+        line-height: 25px;
+
+        color: ${({ theme }) => theme.colors.black};
+        opacity: 0.5;
+        mix-blend-mode: normal;
+      }
+
     }
+  }
 
-    > strong {
-      margin-left: 1.5rem;
+  @media (max-width: 1080px) and (min-width: 768px) {
+    max-width: 34.3125rem;
+    width: 100%;
 
-      font-weight: 500;
-      font-size: 0.9375rem;
-      line-height: 25px;
-
-      color: ${({ theme }) => theme.colors.black};
-      opacity: 0.5;
-      mix-blend-mode: normal;
-    }
+    display: flex;
+    justify-content: space-between;
 
   }
 `
