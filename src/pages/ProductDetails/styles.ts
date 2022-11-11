@@ -6,6 +6,12 @@ export const ProductDetailsContainer = styled.main`
 
   @media (max-width: 1080px) and (min-width: 768px) {
     margin-top: 2rem;
+    margin-bottom: 7.5rem;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 1rem;
+    margin-bottom: 7.5rem;
   }
 `
 
@@ -20,6 +26,10 @@ export const ProductDetailsContent = styled.div`
     margin-top: 1.5rem;
 
     gap: 7.5rem;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 1.5rem;
   }
 
 `

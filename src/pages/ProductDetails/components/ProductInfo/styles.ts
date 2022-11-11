@@ -8,6 +8,10 @@ export const ProductInfoContainer = styled.div`
   @media (max-width: 1080px) and (min-width: 768px) {
     gap: 7.5rem;
   }
+
+  @media (max-width: 767px) {
+    gap: 7.5rem;
+  }
 `
 
 export const ProductCard = styled.div`
@@ -24,6 +28,14 @@ export const ProductCard = styled.div`
     gap: 4.3125rem;
 
     height: 30rem;
+  }
+
+  @media (max-width: 767px) {
+    height: auto;
+
+    flex-direction: column;
+
+    gap: 2rem;
   }
 `
 
@@ -46,6 +58,13 @@ export const ImageContainer = styled.div`
     img {
       height: 13.125rem;
       width: 13.125rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    img {
+      height: 20.4375rem;
+      width: 20.4375rem;
     }
   }
 `
@@ -111,6 +130,22 @@ export const ProductCardContent = styled.div`
       letter-spacing: 1px;
     }
   }
+
+  @media (max-width: 767px) {
+    > span {
+      font-size: 0.75rem;
+      line-height: 16px;
+      letter-spacing: 8.57143px;
+    }
+
+    > strong {
+      width: 40%;
+
+      font-size: 1.75rem;
+      line-height: 32px;
+      letter-spacing: 1px;
+    }
+  }
 `
 
 export const ButtonsContainer = styled.div`
@@ -167,6 +202,12 @@ export const ProductAdditionalInfo = styled.div`
     flex-direction: column;
 
     gap: 7.5rem;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+
+    gap: 5.5rem;
   }
 `
 
