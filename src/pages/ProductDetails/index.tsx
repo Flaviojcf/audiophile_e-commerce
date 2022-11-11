@@ -7,6 +7,7 @@ import { GoBackButton, ProductDetailsContainer, ProductDetailsContent } from './
 import productsJSON from '../../data/products.json'
 import { ProductType } from '../Products'
 import { ProductInfo } from './components/ProductInfo'
+import { Gallery } from './components/Gallery'
 
 export function ProductDetails () {
   const [product, setProduct] = useState<ProductType>(null as any)
@@ -46,6 +47,8 @@ export function ProductDetails () {
 
       <ProductDetailsContent>
         {product && <ProductInfo product={product} />}
+
+        <Gallery />
       </ProductDetailsContent>
 
       <ProductCategoriesNavigator />
