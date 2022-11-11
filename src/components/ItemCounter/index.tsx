@@ -2,11 +2,22 @@ import { ItemCounterContainer } from './styles'
 
 type ItemCounterProps = {
   count: number
-  increaseCount: () => void
-  decreaseCount: () => void
+  changeCountValue: (params: any) => void
 }
 
-export function ItemCounter ({ count, decreaseCount, increaseCount }: ItemCounterProps) {
+export function ItemCounter ({ count, changeCountValue }: ItemCounterProps) {
+  function increaseCount () {
+    changeCountValue(count + 1)
+  }
+
+  function decreaseCount () {
+    if (count === 1) {
+      return
+    }
+
+    changeCountValue(count - 1)
+  }
+
   return (
     <ItemCounterContainer>
       <button

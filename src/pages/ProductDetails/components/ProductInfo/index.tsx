@@ -34,8 +34,7 @@ export function ProductInfo ({ product }: ProductInfoProps) {
           <ButtonsContainer>
             <ItemCounter
               count={itemCounter}
-              increaseCount={() => setItemCounter(oldState => oldState + 1)}
-              decreaseCount={() => setItemCounter(oldState => oldState - 1)}
+              changeCountValue={setItemCounter}
             />
 
             <button>ADD TO CART</button>
