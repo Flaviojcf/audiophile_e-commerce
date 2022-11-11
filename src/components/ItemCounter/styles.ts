@@ -18,6 +18,8 @@ export const ItemCounterContainer = styled.div`
     letter-spacing: 1px;
     text-transform: uppercase;
 
+    text-align: center;
+
     color: ${({ theme }) => theme.colors.black};
   }
 

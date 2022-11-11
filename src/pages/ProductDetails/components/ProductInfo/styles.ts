@@ -28,7 +28,7 @@ export const ProductCardContent = styled.div`
   display: flex;
   flex-direction: column;
 
-  span {
+  > span {
     display: block;
 
     font-weight: 400;
@@ -40,7 +40,7 @@ export const ProductCardContent = styled.div`
     color: ${({ theme }) => theme.colors['orange-300']};
   }
 
-  strong {
+  > strong {
     margin-top: 1rem;
     width: 20.4375rem;
 
@@ -53,7 +53,7 @@ export const ProductCardContent = styled.div`
     color: ${({ theme }) => theme.colors.black};
   }
 
-  p {
+  > p {
     margin-top: 2rem;
 
     font-weight: 500;
@@ -66,7 +66,7 @@ export const ProductCardContent = styled.div`
     mix-blend-mode: normal;
   }
 
-  strong.price {
+  > strong.price {
     font-size: 1.125rem;
     line-height: 25px;
     letter-spacing: 1.28571px;
