@@ -2,6 +2,7 @@ import { CopyrightText, FooterContainer, FooterContainerHeader, Rectangle, Socia
 
 import audioPhileImg from '../../assets/audiophile.svg'
 import { FacebookLogo, InstagramLogo, TwitterLogo } from 'phosphor-react'
+import { Link } from 'react-router-dom'
 
 export function Footer () {
   return (
@@ -12,16 +13,16 @@ export function Footer () {
         <img src={audioPhileImg} alt="Audiophile logo" />
         <ul>
           <li>
-            <a href="#">HOME</a>
+            <Link to="/">HOME</Link>
           </li>
           <li>
-            <a href="#">HEADPHONES</a>
+            <Link to="/products/headphones">HEADPHONES</Link>
           </li>
           <li>
-            <a href="#">SPEAKERS</a>
+            <Link to="/products/speakers">SPEAKERS</Link>
           </li>
           <li>
-            <a href="#">EARPHONES</a>
+            <Link to="/products/earphones">EARPHONES</Link>
           </li>
         </ul>
       </FooterContainerHeader>
