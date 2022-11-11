@@ -17,9 +17,9 @@ export function AudioGear () {
         </span>
       </TextContainer>
       <ImageContainer>
-        <img src="assets\shared\desktop\image-best-gear.jpg"/>
-        <img src="assets\shared\tablet\image-best-gear.jpg"/>
-        <img src="assets\shared\mobile\image-best-gear.jpg"/>
+        <img src="/assets/shared/desktop/image-best-gear.jpg" />
+        <img src="/assets/shared/tablet/image-best-gear.jpg" />
+        <img src="/assets/shared/mobile/image-best-gear.jpg" />
       </ImageContainer>
     </Container>
   )
