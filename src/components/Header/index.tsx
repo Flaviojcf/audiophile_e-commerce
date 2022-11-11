@@ -1,5 +1,5 @@
 import { ShoppingCart } from 'phosphor-react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import { HeaderSectionPerPage } from './components/HeaderSectionPerPage'
 import { MarkHeadPhone } from './components/MarkHeadPhone'
 import {
@@ -14,8 +14,11 @@ import {
 } from './styles'
 
 export function Header () {
-  const { category } = useParams()
-  const existParams = category !== undefined
+  const { category, productSlug } = useParams()
+  const location = useLocation()
+
+  const showHeaderPerPage = !!category && !productSlug
+
   return (
     <>
       <Container>
@@ -69,7 +72,9 @@ export function Header () {
           </ContainerIcon>
         </Content>
       </Container>
-      {existParams ? <HeaderSectionPerPage params={category} /> : <MarkHeadPhone />}
+      {
+        location.pathname === '/' ? <MarkHeadPhone /> : (showHeaderPerPage ? <HeaderSectionPerPage params={category} /> : <></>)
+      }
     </>
   )
 }
