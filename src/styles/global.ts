@@ -12,7 +12,8 @@ export const GlobalStyle = createGlobalStyle`
     .container {
       max-width: 69.375rem;
       width: 100%;
-      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     body {
