@@ -10,10 +10,11 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     .container {
-      max-width: 69.375rem;
+      max-width: 74.375rem;
       width: 100%;
       margin-left: auto;
       margin-right: auto;
+      padding: 0 2rem;
     }
 
     body {
