@@ -21,6 +21,10 @@ export type ProductType = {
   price: number
   features: string
   imageUrl: string
+  includes?: {
+    quantity: number
+    item: string
+  }[]
 }
 
 export function Products () {
