@@ -1,4 +1,5 @@
 import { ShoppingCart } from 'phosphor-react'
+import * as Dialog from '@radix-ui/react-dialog'
 import { Link, useParams } from 'react-router-dom'
 import { HeaderSectionPerPage } from './components/HeaderSectionPerPage'
 import { MarkHeadPhone } from './components/MarkHeadPhone'
@@ -12,6 +13,7 @@ import {
   DropdownMenuRoot,
   DropdownMenuTrigger
 } from './styles'
+import { CartModal } from '../CartModal'
 
 export function Header () {
   const { category } = useParams()
@@ -65,11 +67,22 @@ export function Header () {
           </ContainerLink>
 
           <ContainerIcon>
-            <ShoppingCart size={24} />
+            <Dialog.Root>
+              <Dialog.Trigger asChild>
+                <ShoppingCart size={24} />
+              </Dialog.Trigger>
+              <CartModal/>
+            </Dialog.Root>
           </ContainerIcon>
         </Content>
       </Container>
-      {existParams ? <HeaderSectionPerPage params={category} /> : <MarkHeadPhone />}
+      {existParams
+        ? (
+        <HeaderSectionPerPage params={category} />
+          )
+        : (
+        <MarkHeadPhone />
+          )}
     </>
   )
 }
