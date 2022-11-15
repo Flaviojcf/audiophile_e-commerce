@@ -8,9 +8,10 @@ type ProductProps = {
   imageUrl: string
   description: string
   slug: string
+  category: string
 }
 
-export function Product ({ contentPosition, description, imageUrl, name, slug, isNew = false }: ProductProps) {
+export function Product ({ contentPosition, description, imageUrl, name, slug, category, isNew = false }: ProductProps) {
   return (
     <ProductContainer contentPosition={contentPosition === 'left' ? 'left' : 'right'}>
       <ImageContainer>
@@ -21,7 +22,7 @@ export function Product ({ contentPosition, description, imageUrl, name, slug, i
         <span>NEW PRODUCT</span>
         <strong>{name}</strong>
         <p>{description}</p>
-        <LinkButton to={`/product/${slug}`} content={'SEE PRODUCT'} />
+        <LinkButton to={`/products/${category}/${slug}`} content={'SEE PRODUCT'} />
       </ProductContent>
     </ProductContainer>
   )

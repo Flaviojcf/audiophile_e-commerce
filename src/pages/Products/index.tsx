@@ -21,6 +21,11 @@ export type ProductType = {
   price: number
   features: string
   imageUrl: string
+  category?: string
+  includes?: {
+    quantity: number
+    item: string
+  }[]
 }
 
 export function Products () {
@@ -50,7 +55,8 @@ export function Products () {
       isNew: product.new,
       price: product.price,
       features: product.features,
-      imageUrl: product.image.desktop
+      imageUrl: product.image.desktop,
+      category: product.category
     }))
 
     setProducts(mappedProducts)
@@ -71,6 +77,7 @@ export function Products () {
                 name={product.name}
                 slug={product.slug}
                 isNew={product.isNew}
+                category={product.category!}
                 contentPosition={isEven ? 'left' : 'right'}
               />
             )

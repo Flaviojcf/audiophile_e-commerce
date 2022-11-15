@@ -16,8 +16,11 @@ import {
 import { CartModal } from '../CartModal'
 
 export function Header () {
-  const { category } = useParams()
-  const existParams = category !== undefined
+  const { category, productSlug } = useParams()
+  const location = useLocation()
+
+  const showHeaderPerPage = !!category && !productSlug
+
   return (
     <>
       <Container>
