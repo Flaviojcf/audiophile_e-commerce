@@ -1,7 +1,8 @@
 import { ShoppingCart } from 'phosphor-react'
+import * as Dialog from '@radix-ui/react-dialog'
 import { Link, useParams } from 'react-router-dom'
-import { HeaderSectionPerPage } from '../HeaderSectionPerPage'
-import { MarkHeadPhone } from '../MarkHeadPhone'
+import { HeaderSectionPerPage } from './components/HeaderSectionPerPage'
+import { MarkHeadPhone } from './components/MarkHeadPhone'
 import {
   Container,
   ContainerIcon,
@@ -12,6 +13,7 @@ import {
   DropdownMenuRoot,
   DropdownMenuTrigger
 } from './styles'
+import { CartModal } from '../CartModal'
 
 export function Header () {
   const { category } = useParams()
@@ -25,47 +27,62 @@ export function Header () {
               <DropdownMenuTrigger>
                 <img src="/assets/Group.png" alt="" />
               </DropdownMenuTrigger>
+
               <DropdownMenuContent>
                 <ul>
                   <li>
-                    <a>Home</a>
+                    <Link to={'/'}>Home</Link>
                   </li>
                   <li>
-                    <a>Headphones</a>
+                    <Link to={'/products/headphones'}>Headphones</Link>
                   </li>
                   <li>
-                    <a>Speakers</a>
+                    <Link to={'/products/speakers'}>Speakers</Link>
                   </li>
                   <li>
-                    <a>Earphones</a>
+                    <Link to={'/products/earphones'}>Earphones</Link>
                   </li>
                 </ul>
               </DropdownMenuContent>
             </DropdownMenuRoot>
+
             <Link to="/">
               <img src="/assets/audiophile.png" alt="Logo esrito audiophile" />
             </Link>
           </ContainerImage>
+
           <ContainerLink>
             <li>
-              <a>Home</a>
+              <Link to={'/'}>Home</Link>
             </li>
             <li>
-              <a>Headphones</a>
+              <Link to={'/products/headphones'}>Headphones</Link>
             </li>
             <li>
-              <a>Speakers</a>
+              <Link to={'/products/speakers'}>Speakers</Link>
             </li>
             <li>
-              <a>Earphones</a>
+              <Link to={'/products/earphones'}>Earphones</Link>
             </li>
           </ContainerLink>
+
           <ContainerIcon>
-            <ShoppingCart size={24} />
+            <Dialog.Root>
+              <Dialog.Trigger asChild>
+                <ShoppingCart size={24} />
+              </Dialog.Trigger>
+              <CartModal/>
+            </Dialog.Root>
           </ContainerIcon>
         </Content>
       </Container>
-      {existParams ? <HeaderSectionPerPage params={category}/> : <MarkHeadPhone/>}
+      {existParams
+        ? (
+        <HeaderSectionPerPage params={category} />
+          )
+        : (
+        <MarkHeadPhone />
+          )}
     </>
   )
 }

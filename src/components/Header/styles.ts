@@ -5,6 +5,7 @@ export const Container = styled.header`
   display: flex;
   padding: 2rem 10.3125rem 0rem 10.3125rem;
 
+
   color: ${(props) => props.theme.colors.white};
   background: ${(props) => props.theme.colors['black-200']};
 
@@ -25,6 +26,7 @@ export const Content = styled.div`
   padding-bottom: 2.25rem;
   width: 100%;
 
+
   @media screen and (max-width: 1440px) {
     justify-content: space-between;
   }
@@ -33,6 +35,9 @@ export const Content = styled.div`
     justify-content: space-between;
   }
 
+
+
+
   mix-blend-mode: normal;
 `
 
@@ -40,6 +45,7 @@ export const ContainerImage = styled.div`
   display: flex;
   align-items: center;
   gap: 2.625rem;
+
 
   @media screen and (min-width: 1440px) {
     margin-right: 6.3125rem;
