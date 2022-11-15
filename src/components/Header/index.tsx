@@ -1,6 +1,6 @@
 import { ShoppingCart } from 'phosphor-react'
 import * as Dialog from '@radix-ui/react-dialog'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import { HeaderSectionPerPage } from './components/HeaderSectionPerPage'
 import { MarkHeadPhone } from './components/MarkHeadPhone'
 import {
@@ -79,13 +79,7 @@ export function Header () {
           </ContainerIcon>
         </Content>
       </Container>
-      {existParams
-        ? (
-        <HeaderSectionPerPage params={category} />
-          )
-        : (
-        <MarkHeadPhone />
-          )}
+      { location.pathname === '/' ? <MarkHeadPhone /> : (showHeaderPerPage ? <HeaderSectionPerPage params={category} /> : <></>)}
     </>
   )
 }
