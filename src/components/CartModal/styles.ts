@@ -3,8 +3,8 @@ import * as Dialog from '@radix-ui/react-dialog'
 
 export const ModalOverlay = styled(Dialog.Overlay)`
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   inset: 0;
   z-index: 9;
   background: rgba(0, 0, 0, 0.75);
@@ -19,16 +19,16 @@ export const ModalContent = styled(Dialog.Content)`
   top: 50%;
   right: 11%;
 
-  margin-top: -22rem;
+  margin-top: -24rem;
 
   background: ${(props) => props.theme.colors.white};
   border-radius: 6px;
 
   width: 23.5625rem;
-  max-height: 45.5rem;
+  max-height: 47.5rem;
 
   @media screen and (max-width: 1440px) {
-    margin-top: -14rem;
+    margin-top: -20rem;
     max-height: 43.8rem;
     right: 11.5%;
   }
@@ -192,6 +192,11 @@ export const TotalContainer = styled.div`
     line-height: 25px;
     opacity: 1;
   }
+
+  @media screen and (max-width: 1440px) {
+    margin-top: 0.5rem;
+
+  }
 `
 
 export const ButtonContainer = styled.div`
@@ -210,5 +215,10 @@ export const ButtonContainer = styled.div`
     &:hover {
       background: ${(props) => props.theme.colors['orange-100']};
     }
+  }
+
+  @media screen and (max-width: 1440px) {
+    margin-top: 0.5rem;
+
   }
 `
