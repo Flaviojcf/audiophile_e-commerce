@@ -1,17 +1,54 @@
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import { useState } from 'react'
 import { ItemCounter } from '../../../../components/ItemCounter'
+import { useCartContext } from '../../../../hooks/useCartContext'
 import { ProductType } from '../../../Products'
-import { ButtonsContainer, FeaturesContainer, ImageContainer, IncludesContainer, ProductAdditionalInfo, ProductCard, ProductCardContent, ProductInfoContainer } from './styles'
+import {
+  ButtonsContainer,
+  FeaturesContainer,
+  ImageContainer,
+  IncludesContainer,
+  ProductAdditionalInfo,
+  ProductCard,
+  ProductCardContent,
+  ProductInfoContainer
+} from './styles'
 
 type ProductInfoProps = {
-  product: ProductType
+  product: ProductType;
+};
+
+interface ProductProps {
+  id: string;
+  img: string;
+  price: number;
+  amount: number;
+  totalPrice: number;
 }
 
 export function ProductInfo ({ product }: ProductInfoProps) {
   const [itemCounter, setItemCounter] = useState(1)
+  const { onAddProductToCart } = useCartContext()
+
+  function handleClick (productInfos: ProductProps) {
+    toast.success('Produto adicionado ao carrinho!', {
+      position: 'top-center',
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: 'light'
+    })
+    onAddProductToCart(productInfos)
+    setItemCounter(1)
+  }
 
   return (
     <ProductInfoContainer>
+      <ToastContainer/>
       <ProductCard>
         <ImageContainer>
           <img src={product.imageUrl} />
@@ -24,7 +61,7 @@ export function ProductInfo ({ product }: ProductInfoProps) {
 
           <p>{product.description}</p>
 
-          <strong className='price'>
+          <strong className="price">
             {new Intl.NumberFormat('en-US', {
               style: 'currency',
               currency: 'USD'
@@ -37,7 +74,19 @@ export function ProductInfo ({ product }: ProductInfoProps) {
               changeCountValue={setItemCounter}
             />
 
-            <button>ADD TO CART</button>
+            <button
+              onClick={() =>
+                handleClick({
+                  id: product.name,
+                  img: product.imageUrl,
+                  price: product.price,
+                  amount: itemCounter,
+                  totalPrice: product.price * itemCounter
+                })
+              }
+            >
+              ADD TO CART
+            </button>
           </ButtonsContainer>
         </ProductCardContent>
       </ProductCard>
@@ -53,7 +102,7 @@ export function ProductInfo ({ product }: ProductInfoProps) {
         <IncludesContainer>
           <strong>IN THE BOX</strong>
           <ul>
-            {product?.includes?.map(includedItem => (
+            {product?.includes?.map((includedItem) => (
               <li key={includedItem.item}>
                 <span>{includedItem.quantity}x</span>
                 <strong>{includedItem.item}</strong>
