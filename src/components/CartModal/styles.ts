@@ -28,12 +28,12 @@ export const ModalContent = styled(Dialog.Content)`
   max-height: 45.5rem;
 
   @media screen and (max-width: 1440px) {
-    margin-top: -20rem;
+    margin-top: -14rem;
     max-height: 43.8rem;
     right: 11.5%;
   }
   @media screen and (max-width: 1024px) {
-    margin-top: -20rem;
+
     right: 3.8%;
   }
 
